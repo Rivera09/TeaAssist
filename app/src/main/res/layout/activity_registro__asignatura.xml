@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Registro_Asignatura">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        app:hintTextAppearance="@android:style/TextAppearance.Medium"
+
+        android:id="@+id/textInputLayout3">
+
+        <EditText
+            android:id="@+id/nombreA_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre de asignatura"
+            android:inputType="textPersonName"
+
+             />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        app:hintTextAppearance="@android:style/TextAppearance.Medium"
+        android:id="@+id/textInputLayout2">
+        <EditText
+            android:id="@+id/parciales_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInputLayout3"
+            android:ems="10"
+            android:hint="Cantidad de parciales"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_alignStart="@+id/textInputLayout2"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="25dp">
+
+        <Button
+            android:id="@+id/crear_bttn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:onClick="Registrar"
+            android:text="Crear asignatura"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

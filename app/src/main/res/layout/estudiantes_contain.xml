@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contex="com.example.ragna.taassistant.tabs.Estudiantes">
+
+
+    <RelativeLayout
+
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fam1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorRipple="@color/colorAccent">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_subfab1"
+                app:fab_colorNormal="@color/subPrimary"
+                app:fab_label="Crear nuevo estudiante" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_subfab2"
+                app:fab_colorNormal="@color/subPrimaryDos"
+                app:fab_label="Importar estudiante" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/bus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:hint="Buscar"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:nextFocusLeft="@id/bus"
+                android:nextFocusUp="@id/bus" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ListView
+            android:id="@+id/est"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/r1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/stds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/sinStudiarte"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347"
+        android:textSize="24dp"/>
+</android.support.constraint.ConstraintLayout>

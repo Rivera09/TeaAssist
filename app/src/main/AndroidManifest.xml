@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ragna.taassistant">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_example"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Asignaturas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Asignatuas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.AsignaturaMenu"
+            android:label="@string/title_activity_asignatura_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.Registro_Maestro" />
+        <activity android:name=".Activities.Registro_Estudiantes" />
+        <activity android:name=".Activities.Registro_Asignatura" />
+        <activity
+            android:name=".popups.ExportNotas"
+            android:label="Export"
+            android:theme="@style/pop" />        <activity
+            android:name=".popups.ExportAsis"
+            android:label="Export"
+            android:theme="@style/pop" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".popups.ImportarEstudiantes" android:theme="@style/pop" />
+
+        <activity android:name=".Activities.verEstudiante"></activity>
+    </application>
+
+</manifest>
